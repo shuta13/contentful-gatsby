@@ -2,12 +2,12 @@ require('dotenv').config();
 
 module.exports = {
   siteMetadata: {
-    title: `did0es's blog`,
+    title: `blog.did0es.me`,
     author: {
       name: `did0es`,
-      summary: `This is did0es's blog.`,
+      summary: `blog.did0es.me`,
     },
-    description: `This is did0es's blog.`,
+    description: `blog.did0es.me`,
     siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
     social: {
       twitter: `did0es`,
@@ -120,7 +120,7 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/assets/images/gatsby-icon.png`,
+        icon: `src/assets/images/icon.png`,
       },
     },
     `gatsby-plugin-react-helmet`,
@@ -128,7 +128,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-typegen`,
       options: {
-        outputPath: `src/__generated__/gatsby-types.d.ts`,
+        outputPath: `@types/gatsby-types.d.ts`,
       },
     },
     {

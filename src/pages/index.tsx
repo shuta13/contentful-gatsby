@@ -1,6 +1,8 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import type { PageProps } from 'gatsby';
+import { BLOCKS } from '@contentful/rich-text-types';
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 
@@ -16,7 +18,7 @@ const BlogIndex: React.FC<PageProps<GatsbyTypes.BlogIndexQuery>> = ({
       {edges.map((edge, i) => (
         <div key={i}>
           {edge.node.body?.raw &&
-            JSON.stringify(JSON.parse(edge.node.body.raw))}
+            documentToReactComponents(JSON.parse(edge.node.body.raw))}
         </div>
       ))}
     </Layout>
