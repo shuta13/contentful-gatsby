@@ -1,34 +1,26 @@
-import { graphql } from "gatsby"
+import React from 'react';
+import { graphql } from 'gatsby';
+import type { PageProps } from 'gatsby';
 
-const BlogIndex: React.FC = () => {
-  return (
-    <>
-      <></>
-    </>
-  )
-}
+const BlogIndex: React.FC<PageProps<GatsbyTypes.BlogIndexQuery>> = () => {
+  return <div></div>;
+};
 
-export default BlogIndex
+export default BlogIndex;
 
 export const pageQuery = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-      nodes {
-        excerpt
-        fields {
-          slug
-        }
-        frontmatter {
-          date(formatString: "MMMM DD, YYYY")
+  query BlogIndex {
+    allContentfulBlogPost {
+      edges {
+        node {
           title
-          description
+          slug
+          updatedAt(locale: "ja-JP", formatString: "YYYY年MM月DD日")
+          body {
+            raw
+          }
         }
       }
     }
   }
-`
+`;
