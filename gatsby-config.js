@@ -2,12 +2,12 @@ require('dotenv').config();
 
 module.exports = {
   siteMetadata: {
-    title: `blog.did0es.me`,
+    title: `blog`,
     author: {
       name: `did0es`,
-      summary: `blog.did0es.me`,
+      summary: `blog-contentful-gatsby.did0es.me`,
     },
-    description: `blog.did0es.me`,
+    description: `blog contentful + gatsby`,
     siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
     social: {
       twitter: `did0es`,
